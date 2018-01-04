@@ -1,8 +1,10 @@
 package com.example;
 
+import com.example.resources.StartResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import io.dropwizard.views.ViewBundle;
 
 public class ExampleApplication extends Application<ExampleConfiguration> {
 
@@ -12,18 +14,20 @@ public class ExampleApplication extends Application<ExampleConfiguration> {
 
     @Override
     public String getName() {
-        return "Example";
+        return "dropwizard-mustache-gob-uk";
     }
 
     @Override
     public void initialize(final Bootstrap<ExampleConfiguration> bootstrap) {
-        // TODO: application initialization
+        bootstrap.addBundle(new ViewBundle<>());
     }
 
     @Override
     public void run(final ExampleConfiguration configuration,
                     final Environment environment) {
-        // TODO: implement application
+        final StartResource startResource = new StartResource();
+
+        environment.jersey().register(startResource);
     }
 
 }

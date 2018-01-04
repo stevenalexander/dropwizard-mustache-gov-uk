@@ -24,7 +24,9 @@ repositories {
 
 dependencies {
     compile (
-        'io.dropwizard:dropwizard-core:' + dropwizardVersion
+        'io.dropwizard:dropwizard-core:' + dropwizardVersion,
+        'io.dropwizard:dropwizard-views:' + dropwizardVersion,
+        'io.dropwizard:dropwizard-views-mustache:' + dropwizardVersion
     )
     testCompile (
         'io.dropwizard:dropwizard-testing:' + dropwizardVersion
