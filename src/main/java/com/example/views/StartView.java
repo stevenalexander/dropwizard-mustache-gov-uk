@@ -14,4 +14,6 @@ public class StartView extends View {
     public String getMessage() {
         return message;
     }
+
+    public String getAssetPath() { return "/public/"; }
 }

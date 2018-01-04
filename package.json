@@ -1,0 +1,12 @@
+{
+  "name": "dropwizard-mustache-gov-uk",
+  "version": "1.0.0",
+  "description": "updates gov.uk styles",
+  "main": "update-styles.js",
+  "dependencies": {
+    "govuk_template_mustache": "^0.23.0"
+  },
+  "repository": "none",
+  "author": "Steven Alexander",
+  "license": "ISC"
+}
