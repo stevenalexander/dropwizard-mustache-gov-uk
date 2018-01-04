@@ -11,7 +11,7 @@ Requires:
 
 ```
 ./gradlew run
-# runs on http://localhost:8080 and healthchecks on http://localhost:8081
+# runs on http://localhost:8080/start and healthchecks on http://localhost:8081
 ```
 
 ## Update gov.uk styles
@@ -30,3 +30,4 @@ npm start
 * Dropwizard has no automatic re-compile function for templates, so needs restarted each change
 * Mustache does not officially support inheritance, so the govuk mustache uses a raw html variable approach to handle this, which is not ideal
 * Should refactor to replace passing the MustacheViewRenderer to Resources/Views with a proper GovUkViewRenderer, so resources only need to be aware of their own views
+* Needs default error page, 404 etc.
